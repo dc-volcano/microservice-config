@@ -9,7 +9,6 @@ server:
 spring:
   profiles: dev
 # 数据源配置
-spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
@@ -46,7 +45,6 @@ server:
 spring:
   profiles: test
 # 数据源配置
-spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
