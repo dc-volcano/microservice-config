@@ -1,2 +1,2 @@
 # microservice-yml
-microservice yml file
+microservice configuration file
