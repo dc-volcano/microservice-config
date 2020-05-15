@@ -1,0 +1,37 @@
+spring: 
+  profiles:
+    active:
+    - dev
+---
+server:
+  port: 91
+  context-path: /
+spring:
+  profiles: dev
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka2001.volcano.com:2001/eureka/,http://eureka2002.volcano.com:2002/eureka/,http://eureka2003.volcano.com:2003/eureka/,http://eureka2004.volcano.com:2004/eureka/
+turbine: 
+  app-config: microservice-student   # 指定要监控的应用名称
+  clusterNameExpression: "'default'" #表示集群的名字为default
+spring: 
+  application: 
+    name: turbine
+
+---
+server:
+  port: 91
+  context-path: /
+spring:
+  profiles: test
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka2001.volcano.com:2001/eureka/,http://eureka2002.volcano.com:2002/eureka/,http://eureka2003.volcano.com:2003/eureka/,http://eureka2004.volcano.com:2004/eureka/
+turbine: 
+  app-config: microservice-student   # 指定要监控的应用名称
+  clusterNameExpression: "'default'" #表示集群的名字为default
+spring: 
+  application: 
+    name: turbine

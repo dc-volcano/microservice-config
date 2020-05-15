@@ -1,0 +1,17 @@
+spring: 
+  profiles:
+    active:
+    - dev
+---
+server:
+  port: 90
+  context-path: /
+spring:
+  profiles: dev
+
+---
+server:
+  port: 90
+  context-path: /
+spring:
+  profiles: test  
