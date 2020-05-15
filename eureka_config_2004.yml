@@ -10,12 +10,13 @@ spring:
   profiles: dev
 eureka: 
   instance:
-    hostname: localhost
+    hostname: eureka2004.volcano.com
   client: 
     register-with-eureka: false     #false 由于该应用为注册中心，所以设置为false,代表不向注册中心注册自己。
     fetch-registry: false     #false 由于注册中心的职责就是维护服务实例，它并不需要去检索服务，所以也设置为false
     service-url: 
-       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/       #设置与Eureka注册中心交互的地址，查询服务和注册服务用到       #设置与Eureka注册中心交互的地址，查询服务和注册服务用到
+       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/       #设置与Eureka注册中心交互的地址，查询服务和注册服务用到
+       defaultZone: http://eureka2001.volcano.com:2001/eureka/,http://eureka2002.volcano.com:2002/eureka/,http://eureka2003.volcano.com:2003/eureka/
 ---
 server:
   port: 2004
@@ -24,9 +25,10 @@ spring:
   profiles: test  
 eureka: 
   instance:
-    hostname: localhost
+    hostname: eureka2004.volcano.com
   client: 
     register-with-eureka: false     #false 由于该应用为注册中心，所以设置为false,代表不向注册中心注册自己。
     fetch-registry: false     #false 由于注册中心的职责就是维护服务实例，它并不需要去检索服务，所以也设置为false
     service-url: 
-       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/       #设置与Eureka注册中心交互的地址，查询服务和注册服务用到       #设置与Eureka注册中心交互的地址，查询服务和注册服务用到
+       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/       #设置与Eureka注册中心交互的地址，查询服务和注册服务用到
+       defaultZone: http://eureka2001.volcano.com:2001/eureka/,http://eureka2002.volcano.com:2002/eureka/,http://eureka2003.volcano.com:2003/eureka/
