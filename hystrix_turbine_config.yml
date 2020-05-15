@@ -15,9 +15,6 @@ eureka:
 turbine: 
   app-config: microservice-student   # 指定要监控的应用名称
   clusterNameExpression: "'default'" #表示集群的名字为default
-spring: 
-  application: 
-    name: turbine
 
 ---
 server:
@@ -32,6 +29,3 @@ eureka:
 turbine: 
   app-config: microservice-student   # 指定要监控的应用名称
   clusterNameExpression: "'default'" #表示集群的名字为default
-spring: 
-  application: 
-    name: turbine
