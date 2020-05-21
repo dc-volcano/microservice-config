@@ -13,7 +13,7 @@ eureka:
     service-url:
       defaultZone: http://eureka2001.volcano.com:2001/eureka/,http://eureka2002.volcano.com:2002/eureka/,http://eureka2003.volcano.com:2003/eureka/,http://eureka2004.volcano.com:2004/eureka/
 turbine:
-  app-config: microservice-student   # 指定要监控的应用名称
+  app-config: microservice-student-1004,microservice-student-1005   # 指定要监控的应用名称
   clusterNameExpression: "'default'" #表示集群的名字为default
 
 ---
